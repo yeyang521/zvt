@@ -1,10 +1,15 @@
 # -*- coding: utf-8 -*-
-from zvt.api.quote import get_kdata
+from zvt.api.kdata import get_kdata
 from zvt.factors.algorithm import MaTransformer, MacdTransformer
 
 
 def test_ma_transformer():
-    df = get_kdata(entity_id='stock_sz_000338', start_timestamp='2019-01-01', provider='joinquant')
+    df = get_kdata(
+        entity_id="stock_sz_000338",
+        start_timestamp="2019-01-01",
+        provider="joinquant",
+        index=["entity_id", "timestamp"],
+    )
 
     t = MaTransformer(windows=[5, 10])
 
@@ -14,7 +19,12 @@ def test_ma_transformer():
 
 
 def test_MacdTransformer():
-    df = get_kdata(entity_id='stock_sz_000338', start_timestamp='2019-01-01', provider='joinquant')
+    df = get_kdata(
+        entity_id="stock_sz_000338",
+        start_timestamp="2019-01-01",
+        provider="joinquant",
+        index=["entity_id", "timestamp"],
+    )
 
     t = MacdTransformer()
 

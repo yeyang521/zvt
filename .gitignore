@@ -65,6 +65,7 @@ instance/
 
 # Sphinx documentation
 docs/_build/
+docs/source/api/_autosummary/
 
 # PyBuilder
 target/
@@ -84,6 +85,7 @@ celerybeat-schedule
 # virtualenv
 venv/
 ENV/
+/ve/
 
 # Spyder project settings
 .spyderproject
@@ -91,24 +93,22 @@ ENV/
 # Rope project settings
 .ropeproject
 
-/tick
-/full
-/data/
-/datasample
 /zvt-home
 /zvt-test-home
+
+# Local/VIP extensions (not part of open source)
+zvt_vip/
 *.tar.gz
-/data
-/ve/
+
 .pytest_cache/
-/ui/
+
 # LibreOffice locks
 .~lock.*#
-
-# zen/
 
 node_modules/
 
 *running.ipynb
 
 .DS_Store
+
+a.json
